@@ -1243,6 +1243,7 @@ function App() {
             <Experience />
             <InfiniteMarquee />
             <Projects />
+            <Clients />
             <Formation />
             <Methodology />
           </main>
