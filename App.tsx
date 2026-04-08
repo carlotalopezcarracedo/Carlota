@@ -785,109 +785,157 @@ const Experience = () => {
   );
 };
 
+type CategoryFilter = "todos" | "web" | "social" | "branding" | "producto";
+
+const CATEGORY_FILTERS: { id: CategoryFilter; label: string }[] = [
+  { id: "todos", label: "Todos" },
+  { id: "web", label: "Web" },
+  { id: "social", label: "Redes Sociales" },
+  { id: "branding", label: "Branding" },
+  { id: "producto", label: "Diseño de Producto" },
+];
+
 const Projects = () => {
+  const [activeFilter, setActiveFilter] = useState<CategoryFilter>("todos");
+
+  const filteredProjects = activeFilter === "todos"
+    ? PROJECTS
+    : PROJECTS.filter(p => p.category.includes(activeFilter));
+
   return (
     <section id="proyectos" className="py-24 px-6 md:px-12 bg-neutral-950 border-t border-neutral-900">
       <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
         <SectionLabel text="Proyectos" />
-        
+
         <div className="col-span-12 md:col-span-10">
-          <div className="mb-20">
-             <MaskTextReveal 
-               className="font-display text-[9vw] md:text-[8vw] leading-[0.85] font-bold text-white tracking-tighter uppercase"
-               text="PROYECTOS SELECCIONADOS"
-             />
+          <div className="mb-12">
+            <MaskTextReveal
+              className="font-display text-[9vw] md:text-[8vw] leading-[0.85] font-bold text-white tracking-tighter uppercase"
+              text="PROYECTOS SELECCIONADOS"
+            />
           </div>
 
-        <div className="space-y-32">
-            {PROJECTS.map((project, index) => (
-              <div key={project.id} className="group grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
-                
-                {/* Image Section */}
-                <div className={`col-span-12 md:col-span-7 ${index % 2 === 1 ? 'md:order-last' : ''}`}>
-                   <Interactive text="VIEW">
-                     {project.link ? (
-                       <a
-                         href={project.link}
-                         target="_blank"
-                         rel="noopener noreferrer"
-                         aria-label={`Abrir ${project.title} en nueva pestaña`}
-                         className="block"
-                       >
-                         <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-900 group">
-                            <ParallaxImage 
-                              src={
-                                project.imageSrc
-                                  ? `${import.meta.env.BASE_URL}${project.imageSrc.replace(/^\//, "")}`
-                                  : ``
-                              } 
-                              alt={project.title} 
-                              className="w-full h-full filter grayscale group-hover:grayscale-0 transition-all duration-700"
-                            />
+          {/* Filter tabs */}
+          <div className="mb-20 overflow-x-auto" style={{ scrollbarWidth: 'none' }}>
+            <div className="flex gap-0 border-b border-neutral-800 min-w-max">
+              {CATEGORY_FILTERS.map((filter) => (
+                <button
+                  key={filter.id}
+                  onClick={() => setActiveFilter(filter.id)}
+                  className="relative px-5 py-3 text-xs font-bold uppercase tracking-widest transition-colors duration-300 whitespace-nowrap cursor-pointer"
+                  style={{ color: activeFilter === filter.id ? '#ffffff' : '#737373' }}
+                >
+                  {filter.label}
+                  {activeFilter === filter.id && (
+                    <motion.span
+                      layoutId="filter-underline"
+                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-white"
+                      transition={{ type: "spring", stiffness: 400, damping: 35 }}
+                    />
+                  )}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeFilter}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+              className="space-y-32"
+            >
+              {filteredProjects.map((project, index) => (
+                <div key={project.id} className="group grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
+
+                  {/* Image Section */}
+                  <div className={`col-span-12 md:col-span-7 ${index % 2 === 1 ? 'md:order-last' : ''}`}>
+                    <Interactive text="VIEW">
+                      {project.link ? (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`Abrir ${project.title} en nueva pestaña`}
+                          className="block"
+                        >
+                          <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-900 group">
+                            {project.imageSrc ? (
+                              <ParallaxImage
+                                src={`${import.meta.env.BASE_URL}${project.imageSrc.replace(/^\//, "")}`}
+                                alt={project.title}
+                                loading={index < 2 ? "eager" : "lazy"}
+                                className="w-full h-full filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                              />
+                            ) : (
+                              <PlaceholderImage title={project.title} color={project.color} />
+                            )}
                             <div className="absolute top-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                               <div className="bg-black text-white p-3 rounded-full border border-white/5 shadow-lg transform transition-transform duration-300 group-hover:scale-110 flex items-center justify-center w-12 h-12">
                                 <ArrowUpRight className="w-6 h-6" />
                               </div>
                             </div>
-                            {/* sheen overlay removed per user request */}
-                         </div>
-                       </a>
-                     ) : (
-                       <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-900 group">
-                          <ParallaxImage 
-                            src={
-                              project.imageSrc
-                                ? `${import.meta.env.BASE_URL}${project.imageSrc.replace(/^\//, "")}`
-                                : ``
-                            }
-                            alt={project.title}
-                            className="w-full h-full filter grayscale group-hover:grayscale-0 transition-all duration-700"
-                          />
+                          </div>
+                        </a>
+                      ) : (
+                        <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-900 group">
+                          {project.imageSrc ? (
+                            <ParallaxImage
+                              src={`${import.meta.env.BASE_URL}${project.imageSrc.replace(/^\//, "")}`}
+                              alt={project.title}
+                              loading={index < 2 ? "eager" : "lazy"}
+                              className="w-full h-full filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                            />
+                          ) : (
+                            <PlaceholderImage title={project.title} color={project.color} />
+                          )}
                           <div className="absolute top-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                             <div className="bg-black text-white p-3 rounded-full border border-white/5 shadow-lg transform transition-transform duration-300 group-hover:scale-110 flex items-center justify-center w-12 h-12 cursor-pointer">
                               <ArrowUpRight className="w-6 h-6" />
                             </div>
                           </div>
-                          {/* sheen overlay removed per user request */}
-                       </div>
-                     )}
-                   </Interactive>
+                        </div>
+                      )}
+                    </Interactive>
+                  </div>
+
+                  {/* Text Section */}
+                  <div className="col-span-12 md:col-span-5 flex flex-col justify-center h-full pt-8">
+                    <FadeUp>
+                      <div className="flex items-center gap-4 mb-6">
+                        <span className="text-xs font-mono text-neutral-500">{String(index + 1).padStart(2, '0')}</span>
+                        <span className="h-[1px] flex-grow bg-neutral-800"></span>
+                        <span className={`text-xs font-bold uppercase tracking-widest ${project.color}`}>{project.type}</span>
+                      </div>
+
+                      <h3 className="font-display text-5xl md:text-6xl text-white mb-8 group-hover:ml-4 transition-all duration-500">
+                        {project.title}
+                      </h3>
+
+                      <p className="text-neutral-400 text-lg leading-relaxed mb-8">
+                        {project.description}
+                      </p>
+
+                      <div className="space-y-4 border-l border-neutral-800 pl-6">
+                        <h4 className="text-xs font-bold uppercase tracking-widest text-white mb-2">Concepto</h4>
+                        <ul className="space-y-2">
+                          {project.concept.map((item, i) => (
+                            <li key={i} className="text-sm text-neutral-500 flex items-center gap-2">
+                              <span className={`w-1 h-1 rounded-full ${project.color.replace('text-', 'bg-')}`}></span>
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </FadeUp>
+                  </div>
+
                 </div>
-
-                {/* Text Section */}
-                <div className="col-span-12 md:col-span-5 flex flex-col justify-center h-full pt-8">
-                  <FadeUp>
-                    <div className="flex items-center gap-4 mb-6">
-                      <span className="text-xs font-mono text-neutral-500">0{index + 1}</span>
-                      <span className={`h-[1px] flex-grow bg-neutral-800`}></span>
-                      <span className={`text-xs font-bold uppercase tracking-widest ${project.color}`}>{project.type}</span>
-                    </div>
-                    
-                    <h3 className="font-display text-5xl md:text-6xl text-white mb-8 group-hover:ml-4 transition-all duration-500">
-                      {project.title}
-                    </h3>
-                    
-                    <p className="text-neutral-400 text-lg leading-relaxed mb-8">
-                      {project.description}
-                    </p>
-
-                    <div className="space-y-4 border-l border-neutral-800 pl-6">
-                      <h4 className="text-xs font-bold uppercase tracking-widest text-white mb-2">Concepto</h4>
-                      <ul className="space-y-2">
-                        {project.concept.map((item, i) => (
-                          <li key={i} className="text-sm text-neutral-500 flex items-center gap-2">
-                            <span className={`w-1 h-1 rounded-full ${project.color.replace('text-', 'bg-')}`}></span>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </FadeUp>
-                </div>
-
-              </div>
-            ))}
-          </div>
+              ))}
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </section>
