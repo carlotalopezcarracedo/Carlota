@@ -505,7 +505,7 @@ const FadeUp: React.FC<FadeUpProps> = ({ children, delay = 0 }) => (
   </motion.div>
 );
 
-const ParallaxImage = ({ src, alt, className }: { src: string, alt: string, className?: string }) => {
+const ParallaxImage = ({ src, alt, className, loading = "lazy" }: { src: string, alt: string, className?: string, loading?: "lazy" | "eager" }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
@@ -513,15 +513,25 @@ const ParallaxImage = ({ src, alt, className }: { src: string, alt: string, clas
 
   return (
     <div ref={ref} className={`overflow-hidden relative ${className}`}>
-      <motion.img 
+      <motion.img
         style={{ y, scale, willChange: 'transform' }}
-        src={src} 
+        src={src}
         alt={alt}
+        loading={loading}
+        decoding="async"
         className="w-full h-full object-cover"
       />
     </div>
   );
 };
+
+const PlaceholderImage = ({ title, color }: { title: string; color: string }) => (
+  <div className="w-full h-full flex items-center justify-center bg-neutral-900">
+    <span className={`font-display text-2xl md:text-3xl font-bold uppercase tracking-tighter ${color} opacity-30 text-center px-8`}>
+      {title}
+    </span>
+  </div>
+);
 
 const SectionLabel = ({ text }: { text: string }) => (
   <div className="col-span-12 md:col-span-2 mb-8 md:mb-0">
