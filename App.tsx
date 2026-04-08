@@ -299,10 +299,34 @@ const PROJECTS: ProjectItem[] = [
 ];
 
 const ALL_SKILLS = [
-  "Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign", "Canva", "Figma", 
+  "Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign", "Canva", "Figma",
   "DaVinci Resolve", "CapCut", "Procreate", "Elementor", "WordPress",
   "Identidad Corporativa", "Branding", "Diseño Editorial", "Contenido Digital",
   "Producción Audiovisual"
+];
+
+interface ClientItem {
+  name: string;
+  logo?: string;
+}
+
+const CLIENTS: ClientItem[] = [
+  { name: "Kairas", logo: "/logos/kairas.png" },
+  { name: "Óptima", logo: "/logos/optima.png" },
+  { name: "Quimeras del Norte", logo: "/logos/quimerasdelnorte.png" },
+  { name: "XGAP Fitness Center", logo: "/logos/xgap.png" },
+  { name: "Nobreh", logo: "/logos/nobreh.png" },
+  { name: "AE League", logo: "/logos/aeleague.png" },
+  { name: "Elephant and Castle", logo: "/logos/elephantandcastle.png" },
+  { name: "Kulmen Visuals", logo: "/logos/kulmen.png" },
+  { name: "Prime Energía", logo: "/logos/prime.png" },
+  { name: "Copiabarata" },
+  { name: "Karra Coaching" },
+  { name: "Gotas de Santiago" },
+  { name: "Vitamina 3" },
+  { name: "Orestes Comunica" },
+  { name: "Aceites Retamar" },
+  { name: "Ana San Juan" },
 ];
 
 // --- Animation Components ---
@@ -1032,6 +1056,79 @@ const Methodology = () => {
               </div>
             </Interactive>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ClientLogo = ({ client }: { client: ClientItem }) => {
+  if (client.logo) {
+    return (
+      <img
+        src={`${import.meta.env.BASE_URL}${client.logo.replace(/^\//, "")}`}
+        alt={client.name}
+        loading="lazy"
+        className="h-8 md:h-10 w-auto object-contain opacity-40 hover:opacity-100 transition-opacity duration-300 flex-shrink-0"
+        style={{ mixBlendMode: 'screen' }}
+      />
+    );
+  }
+  return (
+    <span className="text-sm md:text-base font-bold uppercase tracking-widest text-neutral-600 hover:text-neutral-300 transition-colors duration-300 cursor-default select-none flex-shrink-0">
+      {client.name}
+    </span>
+  );
+};
+
+const Clients = () => {
+  const [paused, setPaused] = useState(false);
+  const repeated = [...CLIENTS, ...CLIENTS, ...CLIENTS];
+
+  return (
+    <section className="py-20 px-6 md:px-12 bg-neutral-950 border-t border-neutral-900">
+      <div className="max-w-screen-2xl mx-auto mb-12">
+        <FadeUp>
+          <div className="flex items-center gap-6">
+            <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+            <span className="text-xs font-bold tracking-[0.2em] uppercase text-neutral-400">Clientes</span>
+          </div>
+        </FadeUp>
+      </div>
+
+      <div
+        className="overflow-hidden relative"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
+        {/* Fade edges */}
+        <div className="absolute left-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-r from-neutral-950 to-transparent pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-l from-neutral-950 to-transparent pointer-events-none" />
+
+        <div className="relative flex w-full overflow-hidden">
+          <div
+            className="flex items-center gap-12 py-6 whitespace-nowrap"
+            style={{
+              animation: 'marquee 40s linear infinite',
+              animationPlayState: paused ? 'paused' : 'running',
+            }}
+          >
+            {repeated.map((client, i) => (
+              <ClientLogo key={i} client={client} />
+            ))}
+          </div>
+          <div
+            className="absolute top-0 flex items-center gap-12 py-6 whitespace-nowrap"
+            style={{
+              left: '100%',
+              animation: 'marquee2 40s linear infinite',
+              animationPlayState: paused ? 'paused' : 'running',
+            }}
+          >
+            {repeated.map((client, i) => (
+              <ClientLogo key={i} client={client} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
