@@ -344,9 +344,9 @@ const CLIENTS: ClientItem[] = [
   { name: "Kulmen Visuals", logo: "/logos/kulmen.png" },
   { name: "Prime Energía", logo: "/logos/prime.png" },
   { name: "Copiabarata", logo: "/logos/copiabarata.png", logoClassName: "h-12 md:h-16" },
-  { name: "Karra Coaching", logo: "/logos/karracoaching.png", logoClassName: "h-12 md:h-16" },
+  { name: "Karra Coaching", logo: "/logos/karracoaching.png", logoClassName: "h-14 md:h-20" },
   { name: "Gotas de Santiago", logo: "/logos/gotasdesantiago.png", logoClassName: "h-12 md:h-16" },
-  { name: "Orestes Comunica", logo: "/logos/ORESTES.webp" },
+  { name: "Orestes Comunica", logo: "/logos/ORESTES.webp", logoClassName: "h-7 md:h-9" },
   { name: "Ana San Juan" },
 ];
 
