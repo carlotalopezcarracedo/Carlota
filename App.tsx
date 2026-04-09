@@ -80,7 +80,7 @@ const PROJECTS: ProjectItem[] = [
     title: "Ana Sanjuán",
     type: "Diseño Web & UI/UX",
     category: ["web"],
-    description: "Diseño y desarrollo de la presencia digital para una consultora de RRHH y mentoring. La web refleja profesionalidad y cercanía a través de una estética minimalista, colores neutros y una estructura de navegación intuitiva orientada a la conversión de clientes corporativos.",
+    description: "Diseño y desarrollo de la presencia digital para una consultora de RRHH y mentoring. La web refleja profesionalidad y cercanía a través de una estética minimalista, colores neutros y una estructura de navegación intuitiva.",
     concept: [
       "Identidad serena y profesional",
       "Experiencia de usuario fluida",
@@ -97,7 +97,7 @@ const PROJECTS: ProjectItem[] = [
     title: "Aceites Retamar",
     type: "Social Media & Dirección de Arte",
     category: ["social"],
-    description: "Estrategia de contenido y diseño gráfico para redes sociales. El proyecto 'Aceite con Alma' busca conectar con el consumidor a través de una narrativa visual que mezcla la tradición del aceite de oliva con un estilo de vida moderno y gastronómico.",
+    description: "Estrategia de contenido y diseño gráfico para redes sociales. El proyecto 'Aceite con Alma' busca conectar con el consumidor a través de una narrativa visual que mezcla la tradición del aceite de oliva con un estilo de vida moderno.",
     concept: [
       "Narrativa visual 'Con Alma'",
       "Formas orgánicas y fluidas",
@@ -113,7 +113,7 @@ const PROJECTS: ProjectItem[] = [
     title: "Orestes Comunica",
     type: "Publicidad Exterior & Creatividad",
     category: ["producto"],
-    description: "Diseño de campaña de publicidad exterior y creatividades para agencia de marketing. Una propuesta visual disruptiva basada en el contraste tipográfico y mensajes directos (copywriting) que interpelan al espectador en el entorno urbano.",
+    description: "Diseño de campaña de publicidad exterior y creatividades para agencia de marketing. Una propuesta visual disruptiva basada en el contraste tipográfico y mensajes directos que interpelan al espectador en el entorno urbano.",
     concept: [
       "Copywriting de impacto",
       "Contraste cromático fuerte",
@@ -176,7 +176,7 @@ const PROJECTS: ProjectItem[] = [
     title: "Kairas",
     type: "Diseño Web & Branding",
     category: ["web", "branding"],
-    description: "Diseño web e identidad visual para Kairas, plataforma de inteligencia artificial. Una propuesta que combina tecnología y elegancia para transmitir confianza e innovación.",
+    description: "Diseño web e identidad visual para Kairas, una agencia de automatizaciones con inteligencia artificial. Una propuesta que combina tecnología y elegancia para transmitir confianza e innovación.",
     concept: [
       "Identidad digital moderna",
       "UI/UX orientada a conversión",
@@ -227,7 +227,7 @@ const PROJECTS: ProjectItem[] = [
     title: "Kairas (RRSS)",
     type: "Social Media & Contenido Digital",
     category: ["social"],
-    description: "Gestión de redes sociales y estrategia de contenido para Kairas AI. Comunicación tecnológica cercana que educa y genera comunidad en torno a la inteligencia artificial.",
+    description: "Gestión de redes sociales y estrategia de contenido para Kairas. Comunicación tecnológica cercana que convierte y genera comunidad en torno a la inteligencia artificial.",
     concept: [
       "Comunicación tecnológica accesible",
       "Contenido educativo",
@@ -259,7 +259,7 @@ const PROJECTS: ProjectItem[] = [
     title: "Kulmen Visuals",
     type: "Branding & Identidad Visual",
     category: ["branding"],
-    description: "Identidad corporativa para estudio de fotografía y producción visual. Una marca premium que refleja la excelencia técnica y la visión artística del estudio.",
+    description: "Identidad corporativa para una productora audiovisual independiente. Una marca premium que refleja la excelencia técnica y la visión artística que le definen.",
     concept: [
       "Elegancia visual",
       "Minimalismo sofisticado",
@@ -275,7 +275,7 @@ const PROJECTS: ProjectItem[] = [
     title: "Elephant and Castle",
     type: "Branding e Identidad Visual",
     category: ["branding"],
-    description: "Proyecto de identidad visual y branding con concepto narrativo fuerte. Una propuesta que construye una marca memorable a través de la simbología y la tipografía.",
+    description: "Proyecto de identidad visual y branding para una academia de inglés. Una propuesta que construye una marca memorable a través de la simbología y la tipografía.",
     concept: [
       "Identidad con narrativa",
       "Concepto visual distintivo",
@@ -291,7 +291,7 @@ const PROJECTS: ProjectItem[] = [
     title: "Gotas de Santiago",
     type: "Diseño de Producto & Packaging",
     category: ["producto"],
-    description: "Diseño de etiqueta para botella de licor Gotas de Santiago. Una propuesta visual que fusiona tradición y elegancia en el packaging, evocando la esencia del Camino de Santiago.",
+    description: "Diseño de etiqueta para botella de licor Gotas de Santiago. Una propuesta visual que fusiona frescura y calidad en el packaging, evocando la esencia de la piña colada.",
     concept: [
       "Identidad artesanal y tradicional",
       "Tipografía clásica y elegante",
