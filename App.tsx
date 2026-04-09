@@ -122,7 +122,7 @@ const PROJECTS: ProjectItem[] = [
     ],
     visuals: ["Mupis y vallas publicitarias", "Cartelería urbana", "Aplicaciones de marca"],
     color: "text-orange-500",
-    imageSrc: "/orestes-comunica.webp",
+    imageSrc: "/orestes-logo.webp",
   },
   {
     id: "04",
@@ -185,6 +185,7 @@ const PROJECTS: ProjectItem[] = [
     ],
     visuals: ["Web responsive", "Sistema de diseño", "Logotipo"],
     color: "text-blue-400",
+    imageSrc: "/kairas.webp",
     link: "http://kairas.es/",
   },
   {
@@ -201,6 +202,7 @@ const PROJECTS: ProjectItem[] = [
     ],
     visuals: ["E-commerce", "Diseño de producto", "Web responsive"],
     color: "text-cyan-400",
+    imageSrc: "/copiabarata.webp",
     link: "https://www.copiabarata.com/",
   },
   {
@@ -217,6 +219,7 @@ const PROJECTS: ProjectItem[] = [
     ],
     visuals: ["Feed de Instagram", "Stories", "Reels"],
     color: "text-red-400",
+    imageSrc: "/xgap.webp",
     link: "https://www.instagram.com/xgapfitnesscenter/",
   },
   {
@@ -296,6 +299,22 @@ const PROJECTS: ProjectItem[] = [
     visuals: ["Etiqueta de botella", "Diseño editorial", "Mockup de producto"],
     color: "text-amber-300",
   },
+  {
+    id: "15",
+    title: "Karra Coaching",
+    type: "Branding & Identidad Visual",
+    category: ["branding"],
+    description: "Desarrollo de identidad corporativa para Karra Coaching, servicio de coaching personal y profesional. Una marca que transmite confianza, crecimiento y transformación personal.",
+    concept: [
+      "Identidad inspiradora",
+      "Colores motivacionales",
+      "Tipografía moderna y legible",
+      "Enfoque en desarrollo personal"
+    ],
+    visuals: ["Logotipo", "Tarjetas de visita", "Materiales de marketing"],
+    color: "text-purple-400",
+    imageSrc: "/karracoaching.webp",
+  },
 ];
 
 const ALL_SKILLS = [
@@ -321,7 +340,7 @@ const CLIENTS: ClientItem[] = [
   { name: "Kulmen Visuals", logo: "/logos/kulmen.png" },
   { name: "Prime Energía", logo: "/logos/prime.png" },
   { name: "Copiabarata" },
-  { name: "Karra Coaching" },
+  { name: "Karra Coaching", logo: "/logos/karracoaching.png" },
   { name: "Gotas de Santiago" },
   { name: "Orestes Comunica" },
   { name: "Ana San Juan" },
