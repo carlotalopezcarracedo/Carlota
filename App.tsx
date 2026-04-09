@@ -571,9 +571,33 @@ const FadeUp: React.FC<FadeUpProps> = ({ children, delay = 0 }) => (
 
 const ParallaxImage = ({ src, alt, className, loading = "lazy" }: { src: string, alt: string, className?: string, loading?: "lazy" | "eager" }) => {
   const ref = useRef(null);
+  const [isCoarsePointer, setIsCoarsePointer] = useState(false);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
   const scale = useTransform(scrollYProgress, [0, 1], [1.15, 1]);
+
+  useEffect(() => {
+    const media = window.matchMedia("(pointer: coarse)");
+    const update = () => setIsCoarsePointer(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
+
+  if (isCoarsePointer) {
+    return (
+      <div ref={ref} className={`overflow-hidden relative ${className}`}>
+        <img
+          src={src}
+          alt={alt}
+          loading={loading}
+          decoding="async"
+          fetchPriority={loading === "eager" ? "high" : "auto"}
+          className="w-full h-full object-cover"
+        />
+      </div>
+    );
+  }
 
   return (
     <div ref={ref} className={`overflow-hidden relative ${className}`}>
@@ -625,7 +649,7 @@ const Navbar = ({ menuOpen, setMenuOpen }: { menuOpen: boolean; setMenuOpen: Rea
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 2 }} // Delay for preloader
-      className="fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-12 md:py-8 flex justify-between items-center mix-blend-exclusion text-white pointer-events-none"
+      className="fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-12 md:py-8 flex justify-between items-center bg-neutral-950/70 backdrop-blur-md md:bg-transparent md:backdrop-blur-0 md:mix-blend-exclusion text-white pointer-events-none"
     >
       <div className="pointer-events-auto">
          <Interactive text="HOME">
@@ -717,7 +741,7 @@ const Hero = () => {
   return (
     <section
       ref={containerRef}
-      className="relative h-screen w-full flex flex-col justify-center items-center px-4 overflow-hidden"
+      className="relative min-h-[100svh] md:h-screen w-full flex flex-col justify-center items-center px-4 overflow-clip md:overflow-hidden"
     >
       <motion.div style={{ opacity, scale }} className="relative z-10 w-full max-w-[94vw] px-[2vw]">
         
@@ -1226,7 +1250,7 @@ const Footer = () => {
       </div>
       
       {/* Decorative gradient blob */}
-      <div className="absolute -bottom-1/2 left-1/2 -translate-x-1/2 w-[100vw] h-[50vh] bg-white opacity-[0.03] blur-[100px] rounded-full pointer-events-none"></div>
+      <div className="absolute -bottom-1/2 left-1/2 -translate-x-1/2 w-[100vw] h-[50vh] bg-white opacity-[0.03] blur-[100px] rounded-full pointer-events-none hidden md:block"></div>
 
       {/* Footer neon accent removed per user request */}
     </footer>
@@ -1281,7 +1305,7 @@ function App() {
         <Preloader />
         <CustomCursor />
         {/* Soft neon edge glows */}
-        <div className="pointer-events-none absolute inset-0 z-0">
+        <div className="pointer-events-none absolute inset-0 z-0 hidden md:block">
           <span className="absolute top-[8vh] -left-[8vw] w-[34vw] h-[34vw] rounded-full bg-fuchsia-500/10 blur-[80px]"></span>
           <span className="absolute top-[28vh] -right-[10vw] w-[30vw] h-[30vw] rounded-full bg-fuchsia-500/10 blur-[85px]"></span>
           <span className="absolute top-[85vh] -left-[12vw] w-[28vw] h-[28vw] rounded-full bg-fuchsia-500/10 blur-[90px]"></span>
