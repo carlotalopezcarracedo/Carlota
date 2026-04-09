@@ -122,7 +122,7 @@ const PROJECTS: ProjectItem[] = [
     ],
     visuals: ["Mupis y vallas publicitarias", "Cartelería urbana", "Aplicaciones de marca"],
     color: "text-orange-500",
-    imageSrc: "/orestes-logo.webp",
+    imageSrc: "/orestes-comunica.png",
   },
   {
     id: "04",
