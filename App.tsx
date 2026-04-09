@@ -253,6 +253,7 @@ const PROJECTS: ProjectItem[] = [
     ],
     visuals: ["Logotipo", "Manual de marca", "Aplicaciones"],
     color: "text-orange-400",
+    imageSrc: "/ChatGPT Image 9 abr 2026, 13_24_43.png",
   },
   {
     id: "12",
@@ -268,6 +269,7 @@ const PROJECTS: ProjectItem[] = [
     ],
     visuals: ["Logotipo", "Sistema de diseño", "Web"],
     color: "text-neutral-300",
+    imageSrc: "/ChatGPT Image 9 abr 2026, 13_12_37.png",
     link: "https://kulmenvisuals.com/",
   },
   {
@@ -316,7 +318,7 @@ const PROJECTS: ProjectItem[] = [
     ],
     visuals: ["Logotipo", "Tarjetas de visita", "Materiales de marketing"],
     color: "text-purple-400",
-    imageSrc: "/karracoaching.webp",
+    imageSrc: "/ChatGPT Image 9 abr 2026, 13_37_58.png",
   },
 ];
 
