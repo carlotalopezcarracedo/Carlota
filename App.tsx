@@ -580,9 +580,9 @@ const PlaceholderImage = ({ title, color }: { title: string; color: string }) =>
   </div>
 );
 
-const SectionLabel = ({ text }: { text: string }) => (
+const SectionLabel = ({ text, sticky = true }: { text: string; sticky?: boolean }) => (
   <div className="col-span-12 md:col-span-2 mb-8 md:mb-0">
-    <div className="md:sticky md:top-32 flex items-center gap-3">
+    <div className={`${sticky ? "md:sticky md:top-32" : ""} flex items-center gap-3`}>
       <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
       <span className="text-xs font-bold tracking-[0.2em] uppercase text-neutral-400">
         {text}
@@ -764,7 +764,7 @@ const Profile = () => {
   return (
     <section id="perfil" className="py-24 px-6 md:px-12 relative z-10 bg-neutral-950">
       <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
-        <SectionLabel text="Perfil" />
+        <SectionLabel text="Perfil" sticky={false} />
         <div className="col-span-12 md:col-span-10">
           <MaskTextReveal 
             className="font-display text-3xl md:text-5xl lg:text-7xl font-medium leading-[1.05] text-white mb-10 md:mb-12"
@@ -852,7 +852,7 @@ const Projects = () => {
   return (
     <section id="proyectos" className="py-24 px-6 md:px-12 bg-neutral-950 border-t border-neutral-900">
       <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
-        <SectionLabel text="Proyectos" />
+        <SectionLabel text="Proyectos" sticky={false} />
 
         <div className="col-span-12 md:col-span-10">
           <div className="mb-4 md:mb-6">
