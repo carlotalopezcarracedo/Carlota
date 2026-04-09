@@ -236,6 +236,7 @@ const PROJECTS: ProjectItem[] = [
     ],
     visuals: ["Posts", "Stories", "Contenido multimedia"],
     color: "text-blue-300",
+    imageSrc: "/kairas_social_mockup_ordered_v1.png",
     link: "https://www.instagram.com/kairas.ai/",
   },
   {
@@ -283,6 +284,7 @@ const PROJECTS: ProjectItem[] = [
     ],
     visuals: ["Logotipo", "Paleta cromática", "Aplicaciones de marca"],
     color: "text-amber-400",
+    imageSrc: "/ChatGPT Image 9 abr 2026, 11_38_44.png",
   },
   {
     id: "14",
@@ -298,6 +300,7 @@ const PROJECTS: ProjectItem[] = [
     ],
     visuals: ["Etiqueta de botella", "Diseño editorial", "Mockup de producto"],
     color: "text-amber-300",
+    imageSrc: "/mockup escena ambiente CAMBIOS.png",
   },
   {
     id: "15",
@@ -339,9 +342,9 @@ const CLIENTS: ClientItem[] = [
   { name: "Elephant and Castle", logo: "/logos/elephantandcastle.png" },
   { name: "Kulmen Visuals", logo: "/logos/kulmen.png" },
   { name: "Prime Energía", logo: "/logos/prime.png" },
-  { name: "Copiabarata" },
+  { name: "Copiabarata", logo: "/logos/copiabarata.png" },
   { name: "Karra Coaching", logo: "/logos/karracoaching.png" },
-  { name: "Gotas de Santiago" },
+  { name: "Gotas de Santiago", logo: "/logos/gotasdesantiago.png" },
   { name: "Orestes Comunica" },
   { name: "Ana San Juan" },
 ];
