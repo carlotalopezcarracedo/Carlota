@@ -518,21 +518,38 @@ interface MaskTextRevealProps {
 const MaskTextReveal: React.FC<MaskTextRevealProps> = ({ text, className = "", delay = 0 }) => {
   const words = text.split(" ");
   return (
-    <div className={`overflow-hidden flex flex-wrap gap-x-[0.25em] ${className}`}>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-10%" }}
+      variants={{
+        hidden: {},
+        visible: {
+          transition: {
+            delayChildren: delay,
+            staggerChildren: 0.03,
+          },
+        },
+      }}
+      className={`overflow-hidden flex flex-wrap gap-x-[0.25em] ${className}`}
+    >
       {words.map((word, i) => (
         <span className="overflow-hidden inline-block" key={i}>
           <motion.span
-            className="inline-block"
-            initial={{ y: "110%" }}
-            whileInView={{ y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.75, ease: [0.33, 1, 0.68, 1], delay: delay + i * 0.03 }}
+            className="inline-block text-inherit"
+            variants={{
+              hidden: { y: "110%" },
+              visible: {
+                y: 0,
+                transition: { duration: 0.75, ease: [0.33, 1, 0.68, 1] },
+              },
+            }}
           >
             {word}
           </motion.span>
         </span>
       ))}
-    </div>
+    </motion.div>
   );
 };
 
