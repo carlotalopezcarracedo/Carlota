@@ -77,145 +77,83 @@ const EXPERIENCE: ExperienceItem[] = [
 const PROJECTS: ProjectItem[] = [
   {
     id: "01",
-    title: "Ana Sanjuán",
-    type: "Diseño Web & UI/UX",
-    category: ["web"],
-    description: "Diseño y desarrollo de la presencia digital para una consultora de RRHH y mentoring. La web refleja profesionalidad y cercanía a través de una estética minimalista, colores neutros y una estructura de navegación intuitiva.",
-    concept: [
-      "Identidad serena y profesional",
-      "Experiencia de usuario fluida",
-      "Diseño responsive adaptativo",
-      "Enfoque en servicios de mentoring"
-    ],
-    visuals: ["Mockups de alta fidelidad", "Sistema de diseño minimalista", "Tipografía editorial"],
-    color: "text-rose-300",
-    imageSrc: "/ana-san-juan.webp",
-    link: "https://ana-sanjuan.com/"
-  },
-  {
-    id: "02",
-    title: "Aceites Retamar",
-    type: "Social Media & Dirección de Arte",
-    category: ["social"],
-    description: "Estrategia de contenido y diseño gráfico para redes sociales. El proyecto 'Aceite con Alma' busca conectar con el consumidor a través de una narrativa visual que mezcla la tradición del aceite de oliva con un estilo de vida moderno.",
-    concept: [
-      "Narrativa visual 'Con Alma'",
-      "Formas orgánicas y fluidas",
-      "Paleta de colores tierra y oro",
-      "Fotografía de producto en contexto"
-    ],
-    visuals: ["Feed de Instagram cohesivo", "Historias interactivas", "Fotografía gastronómica"],
-    color: "text-yellow-400",
-    imageSrc: "/aceites-retamar.webp",
-  },
-  {
-    id: "03",
-    title: "Orestes Comunica",
-    type: "Publicidad Exterior & Creatividad",
-    category: ["producto"],
-    description: "Diseño de campaña de publicidad exterior y creatividades para agencia de marketing. Una propuesta visual disruptiva basada en el contraste tipográfico y mensajes directos que interpelan al espectador en el entorno urbano.",
-    concept: [
-      "Copywriting de impacto",
-      "Contraste cromático fuerte",
-      "Diseño para gran formato",
-      "Comunicación disruptiva"
-    ],
-    visuals: ["Mupis y vallas publicitarias", "Cartelería urbana", "Aplicaciones de marca"],
-    color: "text-orange-500",
-    imageSrc: "/orestes-comunica.png",
-  },
-  {
-    id: "04",
-    title: "Quimeras del Norte",
-    type: "Branding & Web",
-    category: ["web", "branding"],
-    description: "Proyecto de identidad corporativa y web para una plataforma de narrativas gallegas. La propuesta se centra en traspasar las historias y escritos de diversos personajes gallegos al entorno digital.",
-    concept: [
-      "Misión: Difundir narraciones gallegas",
-      "Color verde: Naturaleza y entorno",
-      "Roble (Carballo): Elemento central",
-      "Quimera: Mitología e historias imposibles"
-    ],
-    visuals: ["Logotipo serif elegante", "Símbolo de árbol estilizado", "Sistema visual completo"],
-    color: "text-emerald-400",
-    imageSrc: "/quimeras-del-norte.webp",
-  },
-  {
-    id: "05",
-    title: "Nobreh",
-    type: "Identidad Corporativa | Inversiones",
-    category: ["branding"],
-    description: "Desarrollo de imagen visual corporativa para una empresa familiar de gestión de inversiones. Se requería una identidad que transmitiera elegancia y simplicidad.",
-    concept: [
-      "Color amarillo: Riqueza",
-      "Trébol: Fortuna",
-      "5 hojas: Miembros de la familia",
-      "Estilo: Minimalista y sofisticado"
-    ],
-    visuals: ["Logotipo limpio", "Trébol estilizado", "Paleta dorada"],
-    color: "text-yellow-400",
-    imageSrc: "/nobreh.webp",
-  },
-  {
-    id: "06",
-    title: "Vitamina 3",
-    type: "Branding | Proyecto Universitario",
-    category: ["branding"],
-    description: "Proyecto que refleja los valores de un equipo creativo. El nombre nace de la metáfora de aportar energía y vitalidad a las marcas.",
-    concept: [
-      "33,3% atípicamente diferente",
-      "Dosis diaria de energía creativa",
-      "Cercanía personalizada"
-    ],
-    visuals: ["Símbolo solar/energía", "Verde lima/Amarillo", "Tipografía bold"],
-    color: "text-lime-400",
-    imageSrc: "/vitamina-3.webp",
-  },
-  {
-    id: "07",
     title: "Kairas",
-    type: "Diseño Web & Branding",
+    type: "Diseno Web & Branding",
     category: ["web", "branding"],
-    description: "Diseño web e identidad visual para Kairas, una agencia de automatizaciones con inteligencia artificial. Una propuesta que combina tecnología y elegancia para transmitir confianza e innovación.",
+    description: "Diseno web e identidad visual para Kairas, una agencia de automatizaciones con inteligencia artificial. Una propuesta que combina tecnologia y elegancia para transmitir confianza e innovacion.",
     concept: [
       "Identidad digital moderna",
-      "UI/UX orientada a conversión",
-      "Branding tecnológico",
+      "UI/UX orientada a conversion",
+      "Branding tecnologico",
       "Experiencia de usuario premium"
     ],
-    visuals: ["Web responsive", "Sistema de diseño", "Logotipo"],
+    visuals: ["Web responsive", "Sistema de diseno", "Logotipo"],
     color: "text-blue-400",
     imageSrc: "/kairas.webp",
     link: "http://kairas.es/",
   },
   {
-    id: "08",
+    id: "02",
+    title: "Kairas (RRSS)",
+    type: "Social Media & Contenido Digital",
+    category: ["social"],
+    description: "Gestion de redes sociales y estrategia de contenido para Kairas. Comunicacion tecnologica cercana que convierte y genera comunidad en torno a la inteligencia artificial.",
+    concept: [
+      "Comunicacion tecnologica accesible",
+      "Contenido educativo",
+      "Identidad digital consistente",
+      "Engagement con comunidad tech"
+    ],
+    visuals: ["Posts", "Stories", "Contenido multimedia"],
+    color: "text-blue-300",
+    imageSrc: "/projects/kairas-rrss.webp",
+    link: "https://www.instagram.com/kairas.ai/",
+  },
+  {
+    id: "03",
     title: "Copiabarata",
-    type: "Diseño Web",
+    type: "Diseno Web",
     category: ["web"],
-    description: "Diseño y desarrollo web para Copiabarata, servicio de reprografía y copistería online. Interfaz clara y funcional orientada a facilitar el proceso de pedido.",
+    description: "Diseno y desarrollo web para Copiabarata, servicio de reprografia y copisteria online. Interfaz clara y funcional orientada a facilitar el proceso de pedido.",
     concept: [
       "Experiencia de compra clara",
-      "Diseño funcional y directo",
-      "Navegación intuitiva",
-      "Enfoque en conversión"
+      "Diseno funcional y directo",
+      "Navegacion intuitiva",
+      "Enfoque en conversion"
     ],
-    visuals: ["E-commerce", "Diseño de producto", "Web responsive"],
+    visuals: ["E-commerce", "Diseno de producto", "Web responsive"],
     color: "text-cyan-400",
     imageSrc: "/copiabarata.webp",
     link: "https://www.copiabarata.com/",
   },
   {
-    id: "09",
+    id: "04",
+    title: "Kulmen Visuals",
+    type: "Branding & Identidad Visual",
+    category: ["branding"],
+    description: "Identidad corporativa para una productora audiovisual independiente. Una marca premium que refleja la excelencia tecnica y la vision artistica que le definen.",
+    concept: [
+      "Elegancia visual",
+      "Minimalismo sofisticado",
+      "Marca premium",
+      "Excelencia tecnica"
+    ],
+    visuals: ["Logotipo", "Sistema de diseno", "Web"],
+    color: "text-neutral-300",
+    imageSrc: "/projects/kulmen-visuals.webp",
+    link: "https://kulmenvisuals.com/",
+  },
+  {
+    id: "05",
     title: "XGAP Fitness Center",
     type: "Social Media & Contenido Digital",
     category: ["social"],
-    description: "Estrategia de contenido y gestión de redes sociales para centro de fitness. Contenido motivacional que refleja la energía y los valores de la comunidad deportiva.",
+    description: "Estrategia de contenido y gestion de redes sociales para centro de fitness. Contenido motivacional que refleja la energia y los valores de la comunidad deportiva.",
     concept: [
       "Contenido motivacional",
       "Identidad fitness moderna",
       "Comunidad activa",
-      "Estética dinámica y potente"
+      "Estetica dinamica y potente"
     ],
     visuals: ["Feed de Instagram", "Stories", "Reels"],
     color: "text-red-400",
@@ -223,102 +161,164 @@ const PROJECTS: ProjectItem[] = [
     link: "https://www.instagram.com/xgapfitnesscenter/",
   },
   {
-    id: "10",
-    title: "Kairas (RRSS)",
-    type: "Social Media & Contenido Digital",
-    category: ["social"],
-    description: "Gestión de redes sociales y estrategia de contenido para Kairas. Comunicación tecnológica cercana que convierte y genera comunidad en torno a la inteligencia artificial.",
+    id: "06",
+    title: "Karra Coaching",
+    type: "Branding & Identidad Visual",
+    category: ["branding"],
+    description: "Desarrollo de identidad corporativa para Karra Coaching, servicio de coaching personal y profesional. Una marca que transmite confianza, crecimiento y transformacion personal.",
     concept: [
-      "Comunicación tecnológica accesible",
-      "Contenido educativo",
-      "Identidad digital consistente",
-      "Engagement con comunidad tech"
+      "Identidad inspiradora",
+      "Colores motivacionales",
+      "Tipografia moderna y legible",
+      "Enfoque en desarrollo personal"
     ],
-    visuals: ["Posts", "Stories", "Contenido multimedia"],
-    color: "text-blue-300",
-    imageSrc: "/kairas_social_mockup_ordered_v1.png",
-    link: "https://www.instagram.com/kairas.ai/",
+    visuals: ["Logotipo", "Tarjetas de visita", "Materiales de marketing"],
+    color: "text-purple-400",
+    imageSrc: "/projects/karra-coaching.webp",
   },
   {
-    id: "11",
+    id: "07",
+    title: "Ana Sanjuan",
+    type: "Diseno Web & UI/UX",
+    category: ["web"],
+    description: "Diseno y desarrollo de la presencia digital para una consultora de RRHH y mentoring. La web refleja profesionalidad y cercania a traves de una estetica minimalista, colores neutros y una estructura de navegacion intuitiva.",
+    concept: [
+      "Identidad serena y profesional",
+      "Experiencia de usuario fluida",
+      "Diseno responsive adaptativo",
+      "Enfoque en servicios de mentoring"
+    ],
+    visuals: ["Mockups de alta fidelidad", "Sistema de diseno minimalista", "Tipografia editorial"],
+    color: "text-rose-300",
+    imageSrc: "/ana-san-juan.webp",
+    link: "https://ana-sanjuan.com/"
+  },
+  {
+    id: "08",
     title: "Prime",
     type: "Branding e Identidad Visual",
     category: ["branding"],
-    description: "Desarrollo de identidad corporativa para empresa del sector energético. Una imagen que transmite eficiencia, innovación y confianza a través de una estética limpia y contemporánea.",
+    description: "Desarrollo de identidad corporativa para empresa del sector energetico. Una imagen que transmite eficiencia, innovacion y confianza a traves de una estetica limpia y contemporanea.",
     concept: [
-      "Energía y eficiencia",
+      "Energia y eficiencia",
       "Identidad profesional",
       "Sistema visual completo",
       "Confianza y modernidad"
     ],
     visuals: ["Logotipo", "Manual de marca", "Aplicaciones"],
     color: "text-orange-400",
-    imageSrc: "/ChatGPT Image 9 abr 2026, 13_24_43.png",
+    imageSrc: "/projects/prime.webp",
   },
   {
-    id: "12",
-    title: "Kulmen Visuals",
-    type: "Branding & Identidad Visual",
-    category: ["branding"],
-    description: "Identidad corporativa para una productora audiovisual independiente. Una marca premium que refleja la excelencia técnica y la visión artística que le definen.",
+    id: "09",
+    title: "Gotas de Santiago",
+    type: "Diseno de Producto & Packaging",
+    category: ["producto"],
+    description: "Diseno de etiqueta para botella de licor Gotas de Santiago. Una propuesta visual que fusiona frescura y calidad en el packaging, evocando la esencia de la pina colada.",
     concept: [
-      "Elegancia visual",
-      "Minimalismo sofisticado",
-      "Marca premium",
-      "Excelencia técnica"
+      "Identidad artesanal y tradicional",
+      "Tipografia clasica y elegante",
+      "Ilustracion de producto",
+      "Herencia cultural gallega"
     ],
-    visuals: ["Logotipo", "Sistema de diseño", "Web"],
-    color: "text-neutral-300",
-    imageSrc: "/ChatGPT Image 9 abr 2026, 13_12_37.png",
-    link: "https://kulmenvisuals.com/",
+    visuals: ["Etiqueta de botella", "Diseno editorial", "Mockup de producto"],
+    color: "text-amber-300",
+    imageSrc: "/projects/gotas-de-santiago.webp",
   },
   {
-    id: "13",
+    id: "10",
     title: "Elephant and Castle",
     type: "Branding e Identidad Visual",
     category: ["branding"],
-    description: "Proyecto de identidad visual y branding para una academia de inglés. Una propuesta que construye una marca memorable a través de la simbología y la tipografía.",
+    description: "Proyecto de identidad visual y branding para una academia de ingles. Una propuesta que construye una marca memorable a traves de la simbologia y la tipografia.",
     concept: [
       "Identidad con narrativa",
       "Concepto visual distintivo",
       "Sistema de marca cohesivo",
-      "Tipografía expresiva"
+      "Tipografia expresiva"
     ],
-    visuals: ["Logotipo", "Paleta cromática", "Aplicaciones de marca"],
+    visuals: ["Logotipo", "Paleta cromatica", "Aplicaciones de marca"],
     color: "text-amber-400",
-    imageSrc: "/ChatGPT Image 9 abr 2026, 11_38_44.png",
+    imageSrc: "/projects/elephant-and-castle.webp",
+  },
+  {
+    id: "11",
+    title: "Quimeras del Norte",
+    type: "Branding & Web",
+    category: ["web", "branding"],
+    description: "Proyecto de identidad corporativa y web para una plataforma de narrativas gallegas. La propuesta se centra en traspasar las historias y escritos de diversos personajes gallegos al entorno digital.",
+    concept: [
+      "Mision: Difundir narraciones gallegas",
+      "Color verde: Naturaleza y entorno",
+      "Roble (Carballo): Elemento central",
+      "Quimera: Mitologia e historias imposibles"
+    ],
+    visuals: ["Logotipo serif elegante", "Simbolo de arbol estilizado", "Sistema visual completo"],
+    color: "text-emerald-400",
+    imageSrc: "/quimeras-del-norte.webp",
+  },
+  {
+    id: "12",
+    title: "Aceites Retamar",
+    type: "Social Media & Direccion de Arte",
+    category: ["social"],
+    description: "Estrategia de contenido y diseno grafico para redes sociales. El proyecto 'Aceite con Alma' busca conectar con el consumidor a traves de una narrativa visual que mezcla la tradicion del aceite de oliva con un estilo de vida moderno.",
+    concept: [
+      "Narrativa visual 'Con Alma'",
+      "Formas organicas y fluidas",
+      "Paleta de colores tierra y oro",
+      "Fotografia de producto en contexto"
+    ],
+    visuals: ["Feed de Instagram cohesivo", "Historias interactivas", "Fotografia gastronomica"],
+    color: "text-yellow-400",
+    imageSrc: "/aceites-retamar.webp",
+  },
+  {
+    id: "13",
+    title: "Nobreh",
+    type: "Identidad Corporativa | Inversiones",
+    category: ["branding"],
+    description: "Desarrollo de imagen visual corporativa para una empresa familiar de gestion de inversiones. Se requeria una identidad que transmitiera elegancia y simplicidad.",
+    concept: [
+      "Color amarillo: Riqueza",
+      "Trebol: Fortuna",
+      "5 hojas: Miembros de la familia",
+      "Estilo: Minimalista y sofisticado"
+    ],
+    visuals: ["Logotipo limpio", "Trebol estilizado", "Paleta dorada"],
+    color: "text-yellow-400",
+    imageSrc: "/nobreh.webp",
   },
   {
     id: "14",
-    title: "Gotas de Santiago",
-    type: "Diseño de Producto & Packaging",
+    title: "Orestes Comunica",
+    type: "Publicidad Exterior & Creatividad",
     category: ["producto"],
-    description: "Diseño de etiqueta para botella de licor Gotas de Santiago. Una propuesta visual que fusiona frescura y calidad en el packaging, evocando la esencia de la piña colada.",
+    description: "Diseno de campana de publicidad exterior y creatividades para agencia de marketing. Una propuesta visual disruptiva basada en el contraste tipografico y mensajes directos que interpelan al espectador en el entorno urbano.",
     concept: [
-      "Identidad artesanal y tradicional",
-      "Tipografía clásica y elegante",
-      "Ilustración de producto",
-      "Herencia cultural gallega"
+      "Copywriting de impacto",
+      "Contraste cromatico fuerte",
+      "Diseno para gran formato",
+      "Comunicacion disruptiva"
     ],
-    visuals: ["Etiqueta de botella", "Diseño editorial", "Mockup de producto"],
-    color: "text-amber-300",
-    imageSrc: "/mockup escena ambiente CAMBIOS.png",
+    visuals: ["Mupis y vallas publicitarias", "Carteleria urbana", "Aplicaciones de marca"],
+    color: "text-orange-500",
+    imageSrc: "/projects/orestes-comunica.webp",
   },
   {
     id: "15",
-    title: "Karra Coaching",
-    type: "Branding & Identidad Visual",
+    title: "Vitamina 3",
+    type: "Branding | Proyecto Universitario",
     category: ["branding"],
-    description: "Desarrollo de identidad corporativa para Karra Coaching, servicio de coaching personal y profesional. Una marca que transmite confianza, crecimiento y transformación personal.",
+    description: "Proyecto que refleja los valores de un equipo creativo. El nombre nace de la metafora de aportar energia y vitalidad a las marcas.",
     concept: [
-      "Identidad inspiradora",
-      "Colores motivacionales",
-      "Tipografía moderna y legible",
-      "Enfoque en desarrollo personal"
+      "33,3% atipicamente diferente",
+      "Dosis diaria de energia creativa",
+      "Cercania personalizada"
     ],
-    visuals: ["Logotipo", "Tarjetas de visita", "Materiales de marketing"],
-    color: "text-purple-400",
-    imageSrc: "/ChatGPT Image 9 abr 2026, 13_37_58.png",
+    visuals: ["Simbolo solar/energia", "Verde lima/Amarillo", "Tipografia bold"],
+    color: "text-lime-400",
+    imageSrc: "/vitamina-3.webp",
   },
 ];
 
@@ -345,9 +345,9 @@ const CLIENTS: ClientItem[] = [
   { name: "Elephant and Castle", logo: "/logos/elephantandcastle.png" },
   { name: "Kulmen Visuals", logo: "/logos/kulmen.png" },
   { name: "Prime Energía", logo: "/logos/prime.png" },
-  { name: "Copiabarata", logo: "/logos/copiabarata.png", logoClassName: "h-12 md:h-16" },
-  { name: "Karra Coaching", logo: "/logos/karracoaching.png", logoClassName: "h-14 md:h-20" },
-  { name: "Gotas de Santiago", logo: "/logos/gotasdesantiago.png", logoClassName: "h-12 md:h-16" },
+  { name: "Copiabarata", logo: "/logos/copiabarata.webp", logoClassName: "h-12 md:h-16" },
+  { name: "Karra Coaching", logo: "/logos/karracoaching.webp", logoClassName: "h-14 md:h-20" },
+  { name: "Gotas de Santiago", logo: "/logos/gotasdesantiago.webp", logoClassName: "h-12 md:h-16" },
   { name: "Orestes Comunica", logo: "/logos/ORESTES.webp", logoClassName: "h-7 md:h-9" },
   { name: "Ana San Juan" },
 ];
@@ -583,6 +583,7 @@ const ParallaxImage = ({ src, alt, className, loading = "lazy" }: { src: string,
         alt={alt}
         loading={loading}
         decoding="async"
+        fetchPriority={loading === "eager" ? "high" : "auto"}
         className="w-full h-full object-cover"
       />
     </div>
@@ -784,7 +785,7 @@ const Profile = () => {
         <SectionLabel text="Perfil" sticky={false} />
         <div className="col-span-12 md:col-span-10">
           <MaskTextReveal 
-            className="font-display text-3xl md:text-5xl lg:text-7xl font-medium leading-[1.05] text-white mb-10 md:mb-12"
+            className="font-display text-3xl md:text-5xl lg:text-7xl font-medium leading-[1.12] md:leading-[1.08] lg:leading-[1.06] text-white mb-10 md:mb-12"
             text="Creadora de contenido y diseñadora gráfica especializada en branding, diseño digital y producción audiovisual."
           />
           
@@ -1109,6 +1110,7 @@ const ClientLogo = ({ client }: { client: ClientItem }) => {
         src={`${import.meta.env.BASE_URL}${client.logo.replace(/^\//, "")}`}
         alt={client.name}
         loading="lazy"
+        decoding="async"
         className={`${client.logoClassName ?? "h-8 md:h-10"} w-auto object-contain opacity-40 hover:opacity-100 transition-opacity duration-300 flex-shrink-0`}
         style={{ mixBlendMode: 'screen' }}
       />
