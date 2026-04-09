@@ -46,6 +46,19 @@
     </script>
 
     <style>
+      html,
+      body,
+      #root {
+        min-height: 100%;
+      }
+      html,
+      body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        touch-action: auto;
+        overscroll-behavior-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
       body {
         background-color: #050505;
         color: #e5e5e5;

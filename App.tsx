@@ -718,7 +718,6 @@ const Hero = () => {
     <section
       ref={containerRef}
       className="relative h-screen w-full flex flex-col justify-center items-center px-4 overflow-hidden"
-      style={{ touchAction: 'auto', WebkitOverflowScrolling: 'touch' }}
     >
       <motion.div style={{ opacity, scale }} className="relative z-10 w-full max-w-[94vw] px-[2vw]">
         
@@ -798,7 +797,7 @@ const Profile = () => {
             </FadeUp>
             <FadeUp delay={0.4}>
               <p className="text-neutral-400 text-lg md:text-xl font-light leading-relaxed">
-                Me especializo en crear identidades que cuentan historias, utilizando <span className="text-white border-b border-neutral-700">simbolismo cultural</span> (como el roble gallego), color con propósito y una simplicidad elegante.
+                Me especializo en crear identidades que cuentan historias, utilizando simbolismo cultural, color con propósito y una simplicidad elegante.
               </p>
             </FadeUp>
           </div>
@@ -1182,7 +1181,6 @@ const Footer = () => {
   return (
     <footer
       className="w-full bg-neutral-950 border-t border-neutral-900 pt-24 pb-12 px-6 md:px-12 relative overflow-hidden"
-      style={{ touchAction: 'auto', WebkitOverflowScrolling: 'touch' }}
     >
       <div className="max-w-screen-2xl mx-auto relative z-10">
         <div className="flex flex-col items-start mb-32">
@@ -1241,30 +1239,45 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    try {
-      // allow default touch behaviors; avoid restricting gestures
-      document.documentElement.style.touchAction = 'auto';
-      // @ts-ignore
-      document.documentElement.style.WebkitOverflowScrolling = 'touch';
-      document.body.style.touchAction = 'auto';
-      // @ts-ignore
-      document.body.style.WebkitOverflowScrolling = 'touch';
-    } catch (e) {}
+    const html = document.documentElement;
+    const body = document.body;
+    const prevHtml = {
+      overflowX: html.style.overflowX,
+      overflowY: html.style.overflowY,
+      touchAction: html.style.touchAction,
+      overscrollBehaviorY: html.style.overscrollBehaviorY,
+    };
+    const prevBody = {
+      overflowX: body.style.overflowX,
+      overflowY: body.style.overflowY,
+      touchAction: body.style.touchAction,
+      overscrollBehaviorY: body.style.overscrollBehaviorY,
+    };
 
-    const noop = () => {};
-    // passive listeners hint browsers not to block scrolling
-    window.addEventListener('touchstart', noop, { passive: true });
-    window.addEventListener('touchmove', noop, { passive: true });
+    html.style.overflowX = 'hidden';
+    html.style.overflowY = 'auto';
+    html.style.touchAction = 'auto';
+    html.style.overscrollBehaviorY = 'auto';
+    body.style.overflowX = 'hidden';
+    body.style.overflowY = 'auto';
+    body.style.touchAction = 'auto';
+    body.style.overscrollBehaviorY = 'auto';
 
     return () => {
-      window.removeEventListener('touchstart', noop as EventListenerOrEventListenerObject);
-      window.removeEventListener('touchmove', noop as EventListenerOrEventListenerObject);
+      html.style.overflowX = prevHtml.overflowX;
+      html.style.overflowY = prevHtml.overflowY;
+      html.style.touchAction = prevHtml.touchAction;
+      html.style.overscrollBehaviorY = prevHtml.overscrollBehaviorY;
+      body.style.overflowX = prevBody.overflowX;
+      body.style.overflowY = prevBody.overflowY;
+      body.style.touchAction = prevBody.touchAction;
+      body.style.overscrollBehaviorY = prevBody.overscrollBehaviorY;
     };
   }, []);
 
   return (
     <CursorContext.Provider value={{ cursorText, setCursorText, setCursorVariant, cursorVariant }}>
-      <div className="bg-neutral-950 min-h-screen text-neutral-200 selection:bg-white selection:text-black overflow-x-hidden md:cursor-none relative" style={{ WebkitOverflowScrolling: 'touch', touchAction: 'pan-y' }}>
+      <div className="bg-neutral-950 min-h-screen text-neutral-200 selection:bg-white selection:text-black overflow-x-hidden md:cursor-none relative">
         <Preloader />
         <CustomCursor />
         {/* Soft neon edge glows */}
