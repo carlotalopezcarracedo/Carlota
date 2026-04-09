@@ -784,10 +784,11 @@ const Profile = () => {
       <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
         <SectionLabel text="Perfil" sticky={false} />
         <div className="col-span-12 md:col-span-10">
-          <MaskTextReveal 
-            className="font-display text-3xl md:text-5xl lg:text-7xl font-medium leading-[1.12] md:leading-[1.08] lg:leading-[1.06] text-white mb-10 md:mb-12"
-            text="Creadora de contenido y diseñadora gráfica especializada en branding, diseño digital y producción audiovisual."
-          />
+          <FadeUp>
+            <h2 className="font-display text-3xl md:text-5xl lg:text-7xl font-medium leading-[1.12] md:leading-[1.08] lg:leading-[1.06] text-white bg-transparent mb-10 md:mb-12">
+              Creadora de contenido y diseñadora gráfica especializada en branding, diseño digital y producción audiovisual.
+            </h2>
+          </FadeUp>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 border-t border-neutral-800 pt-10 md:pt-12">
             <FadeUp delay={0.2}>
