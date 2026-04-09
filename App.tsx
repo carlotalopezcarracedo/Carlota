@@ -323,9 +323,7 @@ const CLIENTS: ClientItem[] = [
   { name: "Copiabarata" },
   { name: "Karra Coaching" },
   { name: "Gotas de Santiago" },
-  { name: "Vitamina 3" },
   { name: "Orestes Comunica" },
-  { name: "Aceites Retamar" },
   { name: "Ana San Juan" },
 ];
 
