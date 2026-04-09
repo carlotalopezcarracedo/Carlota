@@ -330,22 +330,23 @@ const ALL_SKILLS = [
 interface ClientItem {
   name: string;
   logo?: string;
+  logoClassName?: string;
 }
 
 const CLIENTS: ClientItem[] = [
   { name: "Kairas", logo: "/logos/kairas.png" },
   { name: "Óptima", logo: "/logos/optima.png" },
-  { name: "Quimeras del Norte", logo: "/logos/quimerasdelnorte.png" },
+  { name: "Quimeras del Norte", logo: "/logos/quimerasdelnorte.png", logoClassName: "h-12 md:h-16" },
   { name: "XGAP Fitness Center", logo: "/logos/xgap.png" },
-  { name: "Nobreh", logo: "/logos/nobreh.png" },
+  { name: "Nobreh", logo: "/logos/nobreh.png", logoClassName: "h-12 md:h-16" },
   { name: "AE League", logo: "/logos/aeleague.png" },
   { name: "Elephant and Castle", logo: "/logos/elephantandcastle.png" },
   { name: "Kulmen Visuals", logo: "/logos/kulmen.png" },
   { name: "Prime Energía", logo: "/logos/prime.png" },
-  { name: "Copiabarata", logo: "/logos/copiabarata.png" },
-  { name: "Karra Coaching", logo: "/logos/karracoaching.png" },
-  { name: "Gotas de Santiago", logo: "/logos/gotasdesantiago.png" },
-  { name: "Orestes Comunica" },
+  { name: "Copiabarata", logo: "/logos/copiabarata.png", logoClassName: "h-12 md:h-16" },
+  { name: "Karra Coaching", logo: "/logos/karracoaching.png", logoClassName: "h-12 md:h-16" },
+  { name: "Gotas de Santiago", logo: "/logos/gotasdesantiago.png", logoClassName: "h-12 md:h-16" },
+  { name: "Orestes Comunica", logo: "/logos/ORESTES.webp" },
   { name: "Ana San Juan" },
 ];
 
@@ -1089,7 +1090,7 @@ const ClientLogo = ({ client }: { client: ClientItem }) => {
         src={`${import.meta.env.BASE_URL}${client.logo.replace(/^\//, "")}`}
         alt={client.name}
         loading="lazy"
-        className="h-8 md:h-10 w-auto object-contain opacity-40 hover:opacity-100 transition-opacity duration-300 flex-shrink-0"
+        className={`${client.logoClassName ?? "h-8 md:h-10"} w-auto object-contain opacity-40 hover:opacity-100 transition-opacity duration-300 flex-shrink-0`}
         style={{ mixBlendMode: 'screen' }}
       />
     );
