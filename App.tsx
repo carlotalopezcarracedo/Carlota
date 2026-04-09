@@ -737,7 +737,7 @@ const Hero = () => {
            className="mt-16 flex flex-col md:flex-row justify-between items-end w-full px-2"
         >
           <div className="hidden md:block text-xs font-mono text-neutral-500 max-w-xs">
-            PORTFOLIO 2024 ©<br/>
+            PORTFOLIO 2026 ©<br/>
             DISEÑO GRÁFICO & CONTENIDO
           </div>
           
@@ -767,11 +767,11 @@ const Profile = () => {
         <SectionLabel text="Perfil" />
         <div className="col-span-12 md:col-span-10">
           <MaskTextReveal 
-            className="font-display text-3xl md:text-5xl lg:text-7xl font-medium leading-[1.05] text-white mb-20"
+            className="font-display text-3xl md:text-5xl lg:text-7xl font-medium leading-[1.05] text-white mb-10 md:mb-12"
             text="Creadora de contenido y diseñadora gráfica especializada en branding, diseño digital y producción audiovisual."
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 border-t border-neutral-800 pt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 border-t border-neutral-800 pt-10 md:pt-12">
             <FadeUp delay={0.2}>
               <p className="text-neutral-400 text-lg md:text-xl font-light leading-relaxed">
                 <span className="text-white font-medium">Filosofía estratégica.</span> Cada elemento visual tiene un propósito. Cuento con amplia experiencia en el desarrollo de identidades corporativas, diseño de materiales gráficos y gestión de contenido multiplataforma.
@@ -855,7 +855,7 @@ const Projects = () => {
         <SectionLabel text="Proyectos" />
 
         <div className="col-span-12 md:col-span-10">
-          <div className="mb-12">
+          <div className="mb-4 md:mb-6">
             <MaskTextReveal
               className="font-display text-[9vw] md:text-[8vw] leading-[0.85] font-bold text-white tracking-tighter uppercase"
               text="PROYECTOS SELECCIONADOS"
@@ -1201,7 +1201,7 @@ const Footer = () => {
              </Interactive>
           </div>
           <div className="text-right text-xs font-mono text-neutral-600 uppercase tracking-widest">
-            <p className="mb-2">© 2024 Carlota López Carracedo</p>
+            <p className="mb-2">© 2026 Carlota López Carracedo</p>
             <p>Galicia, España</p>
           </div>
         </div>
