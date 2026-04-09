@@ -241,7 +241,7 @@ const PROJECTS: ProjectItem[] = [
   },
   {
     id: "11",
-    title: "Óptima",
+    title: "Prime",
     type: "Branding e Identidad Visual",
     category: ["branding"],
     description: "Desarrollo de identidad corporativa para empresa del sector energético. Una imagen que transmite eficiencia, innovación y confianza a través de una estética limpia y contemporánea.",
