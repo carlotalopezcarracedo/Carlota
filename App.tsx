@@ -36,9 +36,19 @@ interface ProjectItem {
 
 const EXPERIENCE: ExperienceItem[] = [
   {
+    role: "Freelancer",
+    company: "Branding, Web, Automatizaciones e IA",
+    period: "Junio 2026 - Actualidad",
+    description: [
+      "Desarrollo de proyectos de branding, redes sociales y paginas web",
+      "Creacion de automatizaciones, sistemas digitales e implementacion de IA en negocios",
+      "Diseno de soluciones personalizadas para mejorar procesos, comunicacion y presencia digital"
+    ]
+  },
+  {
     role: "Creadora de Contenido",
     company: "Orestes Comunica",
-    period: "Agosto 2024 - Actualidad",
+    period: "Agosto 2024 - Mayo 2026",
     description: [
       "Elaboración de diseños y redacción de copys",
       "Grabación y edición de vídeos",
