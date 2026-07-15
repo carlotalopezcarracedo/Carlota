@@ -141,6 +141,7 @@ const PROJECTS: ProjectItem[] = [
     visuals: ["Web responsive", "Logotipo", "Sistema visual"],
     color: "text-sky-400",
     imageSrc: "/optimaweb.webp",
+    link: "https://optimamercado.com/",
   },
   {
     id: "05",
@@ -157,6 +158,7 @@ const PROJECTS: ProjectItem[] = [
     visuals: ["Diseno web", "UI responsive", "Estructura de pagina"],
     color: "text-green-400",
     imageSrc: "/reduceweb.webp",
+    link: "https://planreduce.com/",
   },
   {
     id: "06",
