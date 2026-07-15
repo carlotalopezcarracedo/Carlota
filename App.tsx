@@ -128,6 +128,38 @@ const PROJECTS: ProjectItem[] = [
   },
   {
     id: "04",
+    title: "Optima",
+    type: "Diseno Web, Desarrollo & Logo",
+    category: ["web", "branding"],
+    description: "Diseno y desarrollo web desde cero para Optima, incluyendo la creacion del logotipo. Una presencia digital clara, profesional y orientada a transmitir confianza desde el primer contacto.",
+    concept: [
+      "Diseno web desde cero",
+      "Desarrollo responsive",
+      "Creacion de logotipo",
+      "Identidad digital profesional"
+    ],
+    visuals: ["Web responsive", "Logotipo", "Sistema visual"],
+    color: "text-sky-400",
+    imageSrc: "/optimaweb.webp",
+  },
+  {
+    id: "05",
+    title: "Plan Reduce",
+    type: "Diseno Web",
+    category: ["web"],
+    description: "Diseno web desde cero para Plan Reduce, construyendo una interfaz visual directa, ordenada y enfocada en comunicar el servicio con claridad. El trabajo se centra en la experiencia digital y la estructura visual de la pagina.",
+    concept: [
+      "Diseno web desde cero",
+      "Arquitectura visual clara",
+      "Interfaz orientada a conversion",
+      "Experiencia responsive"
+    ],
+    visuals: ["Diseno web", "UI responsive", "Estructura de pagina"],
+    color: "text-green-400",
+    imageSrc: "/reduceweb.webp",
+  },
+  {
+    id: "06",
     title: "Kulmen Visuals",
     type: "Branding & Identidad Visual",
     category: ["branding"],
@@ -144,7 +176,7 @@ const PROJECTS: ProjectItem[] = [
     link: "https://kulmenvisuals.com/",
   },
   {
-    id: "05",
+    id: "07",
     title: "XGAP Fitness Center",
     type: "Social Media & Contenido Digital",
     category: ["social"],
@@ -161,7 +193,7 @@ const PROJECTS: ProjectItem[] = [
     link: "https://www.instagram.com/xgapfitnesscenter/",
   },
   {
-    id: "06",
+    id: "08",
     title: "Karra Coaching",
     type: "Branding & Identidad Visual",
     category: ["branding"],
@@ -177,7 +209,7 @@ const PROJECTS: ProjectItem[] = [
     imageSrc: "/projects/karra-coaching.webp",
   },
   {
-    id: "07",
+    id: "09",
     title: "Ana Sanjuan",
     type: "Diseno Web & UI/UX",
     category: ["web"],
@@ -194,7 +226,7 @@ const PROJECTS: ProjectItem[] = [
     link: "https://ana-sanjuan.com/"
   },
   {
-    id: "08",
+    id: "10",
     title: "Prime",
     type: "Branding e Identidad Visual",
     category: ["branding"],
@@ -210,7 +242,7 @@ const PROJECTS: ProjectItem[] = [
     imageSrc: "/projects/prime.webp",
   },
   {
-    id: "09",
+    id: "11",
     title: "Gotas de Santiago",
     type: "Diseno de Producto & Packaging",
     category: ["producto"],
@@ -226,7 +258,7 @@ const PROJECTS: ProjectItem[] = [
     imageSrc: "/projects/gotas-de-santiago.webp",
   },
   {
-    id: "10",
+    id: "12",
     title: "Elephant and Castle",
     type: "Branding e Identidad Visual",
     category: ["branding"],
@@ -242,7 +274,7 @@ const PROJECTS: ProjectItem[] = [
     imageSrc: "/projects/elephant-and-castle.webp",
   },
   {
-    id: "11",
+    id: "13",
     title: "Quimeras del Norte",
     type: "Branding & Web",
     category: ["web", "branding"],
@@ -258,7 +290,7 @@ const PROJECTS: ProjectItem[] = [
     imageSrc: "/quimeras-del-norte.webp",
   },
   {
-    id: "12",
+    id: "14",
     title: "Aceites Retamar",
     type: "Social Media & Direccion de Arte",
     category: ["social"],
@@ -274,7 +306,7 @@ const PROJECTS: ProjectItem[] = [
     imageSrc: "/aceites-retamar.webp",
   },
   {
-    id: "13",
+    id: "15",
     title: "Nobreh",
     type: "Identidad Corporativa | Inversiones",
     category: ["branding"],
@@ -290,7 +322,7 @@ const PROJECTS: ProjectItem[] = [
     imageSrc: "/nobreh.webp",
   },
   {
-    id: "14",
+    id: "16",
     title: "Orestes Comunica",
     type: "Publicidad Exterior & Creatividad",
     category: ["producto"],
@@ -306,7 +338,7 @@ const PROJECTS: ProjectItem[] = [
     imageSrc: "/projects/orestes-comunica.webp",
   },
   {
-    id: "15",
+    id: "17",
     title: "Vitamina 3",
     type: "Branding | Proyecto Universitario",
     category: ["branding"],
