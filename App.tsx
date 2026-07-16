@@ -38,7 +38,7 @@ const EXPERIENCE: ExperienceItem[] = [
   {
     role: "Freelancer",
     company: "Branding, Web, Automatizaciones e IA",
-    period: "Junio 2026 - Actualidad",
+    period: "Septiembre 2025 - Actualidad",
     description: [
       "Desarrollo de proyectos de branding, redes sociales y paginas web",
       "Creacion de automatizaciones, sistemas digitales e implementacion de IA en negocios",
